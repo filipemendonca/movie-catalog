@@ -2,7 +2,6 @@ import { Controller, Get, Param, Post } from '@nestjs/common';
 import { CONSTANTS } from 'src/core/data/constants/constants';
 import { CatalogServices } from 'src/core/domain/services/catalog.services';
 import { CatalogDto } from 'src/shared/dtos/catalog.dto';
-import { Search } from 'src/shared/interfaces/movies.dto';
 
 @Controller(CONSTANTS.ROUTES.CATALOG.MAIN)
 export class CatalogController {
