@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
-import { CatalogTypeOrmRepository } from 'src/core/data/repository/catalog.typeorm.repository';
-import { CatalogDto } from 'src/shared/dtos/catalog.dto';
+import { CatalogTypeOrmRepository } from '../../../core/data/repository/catalog.typeorm.repository';
+import { CatalogDto } from '../../../shared/dtos/catalog.dto';
 import { Search } from '../../../shared/interfaces/movies.dto';
 import { CatalogCreateMapper } from '../mappers/catalog.mapper';
 import { firstValueFrom } from 'rxjs';

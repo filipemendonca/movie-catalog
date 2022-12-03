@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { CONSTANTS } from 'src/core/data/constants/constants';
+import { CONSTANTS } from '../../../core/data/constants/constants';
 import { Repository } from 'typeorm';
 import { ICatalogRepository } from '../../domain/repository/catalog.repository';
 import { CatalogEntity } from '../../domain/entities/catalog.entity';

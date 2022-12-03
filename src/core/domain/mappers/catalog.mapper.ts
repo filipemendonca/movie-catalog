@@ -1,4 +1,4 @@
-import { CatalogDto } from 'src/shared/dtos/catalog.dto';
+import { CatalogDto } from '../../../shared/dtos/catalog.dto';
 import { CatalogEntity } from '../entities/catalog.entity';
 import { Mapper } from './base/mapper.base';
 
