@@ -11,8 +11,6 @@ export const CONSTANTS = {
   ROUTES: {
     CATALOG: {
       MAIN: '/catalog',
-      GET_ALL_FROM_DB: '/getAll',
-      POST_UPDATE_WITH_ALL_CATALOGS: '/updateDb',
     },
   },
 };
