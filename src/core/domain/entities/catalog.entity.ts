@@ -19,4 +19,7 @@ export class CatalogEntity {
 
   @Column({ length: 250 })
   public producer: string;
+
+  @Column()
+  public offset: number;
 }

@@ -11,8 +11,20 @@ export class CatalogTypeOrmRepository implements CatalogRepository {
     private catalogTypeOrmRepository: Repository<CatalogEntity>,
   ) {}
 
-  async getAll(): Promise<CatalogEntity[]> {
-    return await this.catalogTypeOrmRepository.find();
+  async getAllCountRegisters(): Promise<number> {
+    return await this.catalogTypeOrmRepository.count();
+  }
+
+  async getAll(pageLimit: number, lastId?: number): Promise<CatalogEntity[]> {
+    if (!!lastId) {
+      return await this.catalogTypeOrmRepository.query(
+        `SELECT * FROM catalog_entity WHERE id > ${lastId} LIMIT ${pageLimit}`,
+      );
+    } else {
+      return await this.catalogTypeOrmRepository.query(
+        `SELECT * FROM catalog_entity LIMIT ${pageLimit}`,
+      );
+    }
   }
 
   async create(catalog: CatalogEntity): Promise<void> {

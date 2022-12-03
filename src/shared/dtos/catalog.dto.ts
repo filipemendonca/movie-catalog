@@ -1,6 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
 
 export class CatalogDto {
+  public id: number;
   @IsNotEmpty({ message: 'Title is required.' })
   public title: string;
 
@@ -12,4 +13,6 @@ export class CatalogDto {
   public director?: string;
 
   public producer?: string;
+
+  public offset: number;
 }
