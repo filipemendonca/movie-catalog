@@ -17,6 +17,5 @@ import { HttpModule } from '@nestjs/axios';
   ],
   controllers: [CatalogController],
   providers: [CatalogTypeOrmRepository, CatalogServices],
-  exports: [CatalogServices],
 })
 export class AppModule {}
